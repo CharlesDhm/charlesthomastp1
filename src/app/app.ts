@@ -1,17 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Exemple } from './exemple/exemple';
+import { Component } from '@angular/core';
+import { Header } from './header/header';
+import { Footer } from './footer/footer';
+import { WindowsLogo } from './windows-logo/windows-logo';
+
 @Component({
-  imports: [
-    RouterOutlet, Exemple
-  ],
   selector: 'app-root',
-  styleUrl: './app.scss',
+  imports: [Header, Footer, WindowsLogo],
   templateUrl: './app.html',
+  styleUrl: './app.scss'
 })
 export class App {
-public colorRed: string ='red';
-public textOutput:string ="";
-public exempleOutput(exempleText: string){
-    this.textOutput = exempleText; 
-}}
+  bgClass: string = 'bgblanc'; 
+}

@@ -1,2 +1,7 @@
-<app-exemple (text)=exempleOutput($event) [color]="colorRed"></app-exemple>
-<p>{{textOutput}}</p>
+<div class="page-globale" [class]="bgClass">
+  <app-header></app-header>
+  <div class="contenu-centre">
+    <app-windows-logo (colorChange)="bgClass = $event"></app-windows-logo>
+  </div>
+  <app-footer></app-footer>
+</div>
